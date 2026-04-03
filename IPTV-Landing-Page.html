@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamPro USA - IPTV Subscription | 10,000+ Live Channels</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.6; }
+  
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .hero h1 { font-size: 48px; margin-bottom: 20px; font-weight: 700; }
+  .hero p { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
+  .hero .price { font-size: 60px; font-weight: 800; color: #00d4ff; }
+  .hero .price span { font-size: 20px; opacity: 0.7; }
+  
+  .btn {
+    display: inline-block;
+    background: #00d4ff;
+    color: #1a1a2e;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  .btn:hover { transform: scale(1.05); }
+  .btn-secondary { background: transparent; border: 2px solid white; color: white; }
+  
+  /* FEATURES */
+  .features { padding: 60px 20px; background: #f8f9fa; }
+  .features h2 { text-align: center; font-size: 36px; margin-bottom: 40px; color: #1a1a2e; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+  .feature-card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+  .feature-card .icon { font-size: 40px; margin-bottom: 15px; }
+  .feature-card h3 { color: #1a1a2e; margin-bottom: 10px; }
+  
+  /* DEVICES */
+  .devices { padding: 60px 20px; text-align: center; }
+  .devices h2 { font-size: 36px; margin-bottom: 30px; }
+  .device-logos { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 40px; }
+  
+  /* PRICING */
+  .pricing { padding: 60px 20px; background: #1a1a2e; color: white; }
+  .pricing h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+  .price-card { background: white; color: #333; padding: 40px; border-radius: 20px; text-align: center; }
+  .price-card.popular { border: 4px solid #00d4ff; transform: scale(1.05); }
+  .price-card .price { font-size: 48px; font-weight: 800; color: #1a1a2e; margin: 20px 0; }
+  .price-card .price span { font-size: 16px; opacity: 0.7; }
+  .price-card ul { list-style: none; text-align: left; margin: 20px 0; }
+  .price-card li { padding: 10px 0; border-bottom: 1px solid #eee; }
+  .price-card li::before { content: "✓"; color: #00d4ff; margin-right: 10px; }
+  
+  /* TESTIMONIALS */
+  .testimonials { padding: 60px 20px; background: #f8f9fa; text-align: center; }
+  .testimonials h2 { font-size: 36px; margin-bottom: 40px; }
+  .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+  .test-card { background: white; padding: 30px; border-radius: 15px; }
+  .test-card .stars { color: #ffc107; font-size: 24px; margin-bottom: 15px; }
+  .test-card p { font-style: italic; margin-bottom: 15px; }
+  .test-card .author { font-weight: 600; color: #1a1a2e; }
+  
+  /* FAQ */
+  .faq { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
+  .faq-item { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; }
+  .faq-q { background: #f8f9fa; padding: 20px; font-weight: 600; cursor: pointer; }
+  .faq-a { padding: 20px; display: none; }
+  .faq-item.active .faq-a { display: block; }
+  
+  /* CTA */
+  .cta { background: linear-gradient(135deg, #00d4ff, #0099cc); padding: 80px 20px; text-align: center; color: white; }
+  .cta h2 { font-size: 36px; margin-bottom: 20px; }
+  .cta p { font-size: 20px; margin-bottom: 30px; }
+  
+  /* FOOTER */
+  footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; font-size: 14px; opacity: 0.7; }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    .hero .price { font-size: 40px; }
+    .price-card.popular { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Stream Everything. Pay Nothing Extra.</h1>
+  <p>10,000+ Live Channels for one low monthly price</p>
+  <div class="price">$9.99<span>/month</span></div>
+  <a href="#order" class="btn">START FREE TRIAL</a>
+  <a href="#features" class="btn btn-secondary">Learn More</a>
+  <p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">🔒 3-Day Money-Back Guarantee</p>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <h2>Why Choose StreamPro?</h2>
+  <div class="grid">
+    <div class="feature-card">
+      <div class="icon">📺</div>
+      <h3>10,000+ Channels</h3>
+      <p>USA, UK, Canada, Sports, Movies, News & International</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎬</div>
+      <h3>50,000+ VOD</h3>
+      <p>Movies & Series on demand, updated daily</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⚡</div>
+      <h3>99.9% Uptime</h3>
+      <p>Premium streaming quality with no buffering</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎧</div>
+      <h3>24/7 Support</h3>
+      <p>We're here whenever you need help</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📱</div>
+      <h3>Multi-Device</h3>
+      <p>Use on up to 3 devices simultaneously</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📡</div>
+      <h3>EPG Guide</h3>
+      <p>7-day program guide included</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEVICES -->
+<section class="devices">
+  <h2>Works On All Your Devices</h2>
+  <div class="device-logos">
+    <span>📺 Fire TV</span>
+    <span>📺 Roku</span>
+    <span>📺 Apple TV</span>
+    <span>📺 Android TV</span>
+    <span>📺 Smart TV</span>
+    <span>📺 Phone/Tablet</span>
+    <span>📺 Computer</span>
+  </div>
+  <p style="margin-top: 20px; color: #666;">Compatible with: Firestick, Roku, Apple TV, Android TV Boxes, Samsung LG Sony Smart TVs, iOS, Android, PC, Mac</p>
+</section>
+
+<!-- PRICING -->
+<section id="order" class="pricing">
+  <h2>Simple, Transparent Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <div class="price">$9.99<span>/mo</span></div>
+      <ul>
+        <li>5,000+ Channels</li>
+        <li>HD Quality</li>
+        <li>1 Connection</li>
+        <li>Basic Support</li>
+      </ul>
+      <a href="#" class="btn">SELECT</a>
+    </div>
+    <div class="price-card popular">
+      <div style="background: #00d4ff; color: #1a1a2e; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 12px; font-weight: 600; margin-bottom: 10px;">MOST POPULAR</div>
+      <h3>Pro</h3>
+      <div class="price">$14.99<span>/mo</span></div>
+      <ul>
+        <li>10,000+ Channels</li>
+        <li>4K Quality</li>
+        <li>2 Connections</li>
+        <li>Priority Support</li>
+      </ul>
+      <a href="#" class="btn">SELECT</a>
+    </div>
+    <div class="price-card">
+      <h3>Premium</h3>
+      <div class="price">$19.99<span>/mo</span></div>
+      <ul>
+        <li>15,000+ Channels</li>
+        <li>4K Quality</li>
+        <li>4 Connections</li>
+        <li>VIP Support</li>
+      </ul>
+      <a href="#" class="btn">SELECT</a>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 30px; opacity: 0.7;">💰 Save 20% with yearly plan - Only $95/year!</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Best IPTV I've used. Sports work perfectly and customer service is amazing!"</p>
+      <div class="author">- Mike T., Chicago</div>
+    </div>
+    <div class="test-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Saved $80/month switching from cable. Works great on my Firestick!"</p>
+      <div class="author">- Sarah L., Miami</div>
+    </div>
+    <div class="test-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Finally can watch my home country channels. Worth every penny!"</p>
+      <div class="author">- Ahmed K., New York</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">Is this legal?</div>
+    <div class="faq-a">We provide streaming technology. Users are responsible for content they access in their jurisdiction.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What internet speed do I need?</div>
+    <div class="faq-a">We recommend minimum 25 Mbps for HD and 50 Mbps for 4K streaming.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I get a refund?</div>
+    <div class="faq-a">Yes! We offer 3-day money-back guarantee if service doesn't work for you.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I get started?</div>
+    <div class="faq-a">After purchase, you'll receive setup instructions via email within 5 minutes.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do you offer trial?</div>
+    <div class="faq-a">Yes! 24-hour trial available for $1 to test our service before committing.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Cut the Cord?</h2>
+  <p>Join thousands of happy customers saving $80+/month</p>
+  <a href="#order" class="btn" style="background: white; color: #00d4ff;">GET STARTED NOW</a>
+  <p style="margin-top: 20px; font-size: 14px;">🔒 30-Day Money-Back Guarantee • No Hidden Fees • Instant Access</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 StreamPro USA. All rights reserved.</p>
+  <p style="margin-top: 10px;">Our service provides streaming technology. We do not own or broadcast any content.<br>Users are responsible for ensuring they have the right to access content in their jurisdiction.</p>
+</footer>
+
+</body>
+</html>
